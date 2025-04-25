@@ -5,9 +5,18 @@
   
   <title>Wencheng Yang</title>
 
+  <style>
+    #main {
+      display: none;
+    }
+  </style>
   <script>
     var password = prompt("请输入访问密码：");
-    if (password !== "1234") {
+    if (password === "1234") {
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("main").style.display = "block";
+      });
+    } else {
       document.write("<h2>Access Denied</h2>");
       throw new Error("Access denied");
     }
