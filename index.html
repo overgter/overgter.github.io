@@ -1,7 +1,17 @@
 <!DOCTYPE HTML>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+<head>
+  
   <title>Wencheng Yang</title>
+
+  <script>
+    var password = prompt("请输入访问密码：");
+    if (password !== "123456") {
+      document.write("<h2>Access Denied</h2>");
+      throw new Error("Access denied");
+    }
+  </script>
   
   <meta name="author" content="Wencheng Yang">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -151,14 +161,6 @@
             background-color: rgba(33, 104, 151, 0.2);
         }
   </style>
-
-<head>
-  <script>
-  var password = prompt("请输入访问密码：");
-  if (password !== "1234") {
-    document.body.innerHTML = "<h2>Access Denied</h2>";
-  }
-  </script>
 
 </head>
 
