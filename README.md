@@ -1,2 +1,2 @@
 # overgter.github.io
-This is a person website.
+This is a personal website.
