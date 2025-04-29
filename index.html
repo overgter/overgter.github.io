@@ -1,260 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Homepage - Wencheng Yang</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; }
-        header { background-color: #004080; color: white; padding: 20px; text-align: center; }
-        nav { margin: 20px; text-align: center; }
-        nav a { margin: 0 15px; color: #004080; text-decoration: none; font-weight: bold; }
-        section { margin: 20px auto; max-width: 1000px; padding: 20px; background-color: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h2 { color: #004080; border-bottom: 2px solid #004080; padding-bottom: 5px; }
-        footer { text-align: center; padding: 10px; font-size: 0.9em; color: gray; }
-        .pub-item, .grant-item { margin-bottom: 10px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wencheng Yang - Academic Homepage</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+  <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Georgia", serif;}
+    .w3-sidebar a {font-weight: bold;}
+    .news-container { max-height: 250px; overflow-y: auto; background: #f1f1f1; padding: 10px; border-radius: 8px; }
+    .profile-photo {width: 100%; max-width: 200px; height: auto; border-radius: 10px;}
+  </style>
 </head>
-<body>
 
-<header>
-    <h1>Wencheng Yang</h1>
-    <p>Senior Lecturer | UnisQ</p>
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Top bar for small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-blue-grey w3-xlarge">
+  <div class="w3-bar-item w3-padding-24">Wencheng Yang</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><b>≡</b></a>
 </header>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#grants">Grants</a>
-    <a href="#awards">Awards</a>
-    <a href="#publications">Publications</a>
-    <a href="#teaching">Teaching</a>
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-top w3-large w3-theme-l5" style="z-index:3;width:200px;font-weight:bold;" id="mySidebar">
+  <div class="w3-container w3-theme-d2">
+    <h4>Menu</h4>
+  </div>
+  <a href="#about" class="w3-bar-item w3-button w3-hover-theme">About</a>
+  <a href="#news" class="w3-bar-item w3-button w3-hover-theme">News</a>
+  <a href="#research" class="w3-bar-item w3-button w3-hover-theme">Research Grants Awards</a>
+  <a href="#publications" class="w3-bar-item w3-button w3-hover-theme">Publications</a>
+  <a href="#teaching" class="w3-bar-item w3-button w3-hover-theme">Teaching</a>
+  <div style="width: 100%; text-align: center; padding: 10px 0; margin-top: auto;">
+    <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=n&d=JYNBrTGiMidXP4iRGDexAz8y7pc_jkV5DzZQE2jjQyU&co=A0B1B9'></script>
+  </div>
 </nav>
 
-<section id="about" style="text-align: justify;">
+<!-- Overlay effect for small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content -->
+<div class="w3-main" style="margin-left:200px">
+
+  <!-- Welcome Section with Photo -->
+  <div class="w3-container w3-padding-32" id="welcome" style="display: flex; align-items: center; flex-wrap: wrap;">
+    <div style="flex: 0 0 auto; margin-right: 30px; text-align: center;">
+      <img class="profile-photo" src="images/profile.jpg" alt="Wencheng Yang">
+    </div>
+    <div style="flex: 1 1 0;">
+      <h1>Wencheng Yang</h1>
+      <p>Senior Lecturer | University of Southern Queensland (UniSQ)</p>
+      <p>Research Interests: Biometrics, Deep Learning, AI</p>
+      <p>Email: <a href="mailto:Wencheng.Yang@unisq.edu.au">Wencheng.Yang@unisq.edu.au</a></p>
+      <p><a href="https://scholar.google.com.au/citations?hl=en&user=9RuoruEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Google Scholar</a></p>
+    </div>
+  </div>
+
+  <div class="w3-container w3-padding-32" id="about">
     <h2>About Me</h2>
-   <ul>
-        <li>I am currently working as a senior lecturer (equal to U.S. Associate Professor) in the School of Mathematics, Physics and Computing at University of Southern Queensland (UniSQ), Australia.</li>
-        <li>My major research interests are in Biometrics, Deep Learning, and AI. I have authored a number of papers published in high-ranking journals, e.g., IEEE Transactions on Information Forensics and Security (impact factor=6.8), Pattern Recognition (impact factor=8.0), IEEE Transactions on Industrial Informatics (impact factor=12.3), etc.</li>
-        <li>I received my PhD degree in computer science from the University of New South Wales, Australia. I have managed some research projects, e.g., I was the leading investigator of a research grant from Competitive Evaluation Research Agreement (CERA) Program, Defence Science and Technology Group of the Department of Defence, Australia.</li>
-        <li>I have been actively providing services to the research community. E.g., Now I am serving as the editor of journal: KSII Transactions on Internet and Information Systems (SCIE index), and I was a special issue guest editor of journal: Journal of Information Security and Applications. I also served as a TPC member for a number of International Conferences, e.g., SpaCCS 2017, Globecom 2018, Globecom 2019, IEEE-GCC 2019, Globecom2021, 2022, Globecom 2024 CISS.</li>
-    </ul>
-</section>
+    <p>I am currently working as a senior lecturer (Associate Professor equivalent) in the School of Mathematics, Physics and Computing at UniSQ, Australia. My major research interests are in Biometrics, Deep Learning, and AI.</p>
+    <p>I received my PhD from UNSW and have led projects funded by Defence Science and Technology Group, Australia.</p>
+  </div>
 
-<section id="recruiting" style="text-align: justify;">
-    <h2 style="color: red;">✨ Recruiting Research Students ✨</h2>
-    <ul style="color: red;">
-        <li><strong>I am looking for self-motivated Master's and PhD students. If you are interested in pursuing the Master's or PhD degree under my supervision, please send me an email with your CV.</strong></li>
-        <li><strong>Visiting students and visiting fellows are also welcome!</strong></li>
-    </ul>
-</section>
-
-<section id="news" style="text-align: justify;">
+  <div class="w3-container w3-padding-32" id="news">
     <h2>News</h2>
-   <table style="border-collapse: collapse; width: 100%; text-align: justify;">
-<!--       <thead>
-        <tr>
-          <th style="text-align: left; padding: 8px;">Date</th>
-          <th style="text-align: left; padding: 8px;">Description</th>
-        </tr>
-      </thead> -->
-      <tbody>
-        <tr>
-          <td style="padding: 8px;">04/2025:</td>
-          <td style="padding: 8px;">Our latest survey paper about deep learning security, titled "Deep Learning Model Inversion Attacks and Defenses: A Comprehensive Survey", is now accepted by <strong>Artificial Intelligence Review, Impact Factor:10.7</strong>.</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px;">12/2024:</td>
-          <td style="padding: 8px;">I am honored to receive <strong>the 2024 University Learning and Teaching Award</strong> as part of the team for the project titled 'Strategies for Supporting Students Transitioning from Diverse Educational Backgrounds to Computer Science Using Complex Systems Such as High-Performance Computing'.</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px;">12/2024:</td>
-          <td style="padding: 8px;">I am delighted to serve as the Big Data and Privacy Session Chair for the Twelfth International Conference on Advanced Cloud and Big Data (CBD 2024), held from November 28 to December 2, 2024, in Brisbane, Australia.</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px;">01/2025:</td>
-          <td style="padding: 8px;">Our latest survey paper about deep learning security is available online now. Deep Learning Model Inversion Attacks and Defenses: A Comprehensive Survey.</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px;">09/2024:</td>
-          <td style="padding: 8px;">It is indeed an honor to be among the "<strong>World's Top 2% Scientists</strong>" for 2024, published by Stanford University and Elsevier on 17 September 2024.</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px;">05/2024:</td>
-          <td style="padding: 8px;">I am glad to know that I received the 2023 School Research Performance Award, UniSQ.</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px;">01/2024:</td>
-          <td style="padding: 8px;">I have been promoted to Senior Lecturer, effective from 01/01/2024.</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px;">10/2023:</td>
-          <td style="padding: 8px;">We have a paper accepted for publication in CAAI Transactions on Intelligence Technology. Thanks to all the coauthors for their contributions.</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px;">10/2023:</td>
-          <td style="padding: 8px;">Congratulations to Shicheng, our paper is accepted by HIS2023 International Conference.</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px;">02/2023:</td>
-          <td style="padding: 8px;">We have a paper accepted by IEEE Transactions on Network Science and Engineering.</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px;">02/2022:</td>
-          <td style="padding: 8px;">I am nominated as seminar coordinator for the ECU school of science seminar series in 2022 S1.</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px;">09/2021:</td>
-          <td style="padding: 8px;">I act as one of the mentors for the "Innovate to Grow" of CSIRO Cyber Security Program.</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px;">02/2021:</td>
-          <td style="padding: 8px;">Our paper is awarded as the best paper at Australasian Information Security Conference - AISC 2021.</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px;">12/2018:</td>
-          <td style="padding: 8px;">I was awarded the <strong>Early and Mid-Career Researcher Award</strong> 2018, ECU.</td>
-        </tr>
-        <tr>
-          <td style="padding: 8px;">04/2018:</td>
-          <td style="padding: 8px;">$50m Cyber Security CRC, headquartered at ECU.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="news-container">
+      <ul>
+        <li>04/2025: Our survey "Deep Learning Model Inversion Attacks and Defenses" accepted by Artificial Intelligence Review.</li>
+        <li>12/2024: Received 2024 UniSQ Learning and Teaching Award.</li>
+        <li>12/2024: Big Data and Privacy Session Chair at CBD 2024, Brisbane.</li>
+        <li>09/2024: Named among the "World's Top 2% Scientists" by Stanford University and Elsevier.</li>
+        <li>05/2024: Received 2023 School Research Performance Award, UniSQ.</li>
+        <li>01/2024: Promoted to Senior Lecturer.</li>
+        <li>02/2023: Paper accepted by IEEE Transactions on Network Science and Engineering.</li>
+        <li>02/2021: Best Paper Award at AISC 2021.</li>
+      </ul>
+    </div>
+  </div>
 
-
-
-</section>
-    
-<section id="research">
-    <h2>Research Topics</h2>
+  <div class="w3-container w3-padding-32" id="research">
+    <h2>Research Grants and Awards</h2>
     <ul>
-        <li>Biometrics</li>
-        <li>Deep Learning</li>
-        <li>AI</li>
+      <li>2023: Capacity Building Grant, UniSQ, $15,000.</li>
+      <li>2021-2023: Cyber Security Research Centre Ltd Scholarship, $120,000.</li>
+      <li>2017-2018: Defence Science and Technology Group Project, $97,729.</li>
     </ul>
-</section>
+  </div>
 
-<section id="grants" style="text-align: justify;">
-    <h2>Grants and Projects</h2>
-<!--     <div class="grant-item">
-        <strong>Securing Template Data for Artificial Intelligence Based Biometrics</strong> (2023), $15,000<br>
-        
-    </div> -->
- <table style="border-collapse: collapse; width: 100%; text-align: justify;">
-    <tbody>
-    <tr>
-      <td style="padding: 8px;">2023:</td>
-      <td style="padding: 8px;"><strong>Securing Template Data for Artificial Intelligence Based Biometrics</strong>, Capacity Building Grants, UniSQ, $15,000.</td>
-    </tr>
-    <tr>
-      <td style="padding: 8px;">2021–2023:</td>
-      <td style="padding: 8px;"><strong>Multi-factor Authentication in Medical Contexts for Pharmaceutical Dispensary Functions</strong>, Cyber Security Research Centre Ltd, Cyber Security Research Centre Masters Scholarship, $120,000.</td>
-    </tr>
-    <tr>
-      <td style="padding: 8px;">2019–2022:</td>
-      <td style="padding: 8px;"><strong>Network Forensics and Responses to Emerging Threats</strong>, Cyber Security Research Centre Ltd, Postdoctoral Research Fellowship, $537,763.</td>
-    </tr>
-    <tr>
-      <td style="padding: 8px;">2019:</td>
-      <td style="padding: 8px;"><strong>Securing Critical Data in the IoT: A Privacy-Preserving Fingerprint Biometric System</strong>, accepted by the National Security College (NSC) and Defence Science Technology (DST) for presentation at the Technology Surprise Forum of the 16th Safeguarding Australia Summit. Funding received from NSC and DST, $15,000.</td>
-    </tr>
-    <tr>
-      <td style="padding: 8px;">2017–2018:</td>
-      <td style="padding: 8px;"><strong>Advanced Biometric Template Protection: Design of a Cancelable Biometric Framework</strong>, Defence Science and Technology Group of the Department of Defence, CERA Program, $97,729.</td>
-    </tr>
-    <tr>
-      <td style="padding: 8px;">2017:</td>
-      <td style="padding: 8px;"><strong>Design of a Biometric Protection System using Feature Transformation Techniques</strong>, Edith Cowan University, School of Science Early Career Grant Scheme Semester 1, $8,700.</td>
-    </tr>
-    
-</tbody>
-</table>
-
-    
-</section>
-
-<section id="awards" style="text-align: justify;">
-<h2>Awards</h2>
-<table style="border-collapse: collapse; width: 100%; text-align: justify;">
-<tbody>
-    <tr>
-      <td style="padding: 8px;">2024:</td>
-      <td style="padding: 8px;">School Research Performance Award, UniSQ.</td>
-    </tr>
-    <tr>
-      <td style="padding: 8px;">2023:</td>
-      <td style="padding: 8px;">School Research Performance Award, UniSQ.</td>
-    </tr>
-    <tr>
-      <td style="padding: 8px;">2021:</td>
-      <td style="padding: 8px;">The Best Paper Award at Australasian Information Security Conference - AISC.</td>
-    </tr>
-    <tr>
-      <td style="padding: 8px;">2018:</td>
-      <td style="padding: 8px;">Early and Mid-Career Researcher Award, ECU.</td>
-    </tr>
-    
-    <tr>
-      <td style="padding: 8px;">2014:</td>
-      <td style="padding: 8px;">Chinese Scholarship Council Outstanding Self-Financed Students Abroad.</td>
-    </tr>
-    <tr>
-      <td style="padding: 8px;">2014:</td>
-      <td style="padding: 8px;">High Impact Journal Publication Award, SEIT, UNSW.</td>
-    </tr>
-    <tr>
-      <td style="padding: 8px;">2013:</td>
-      <td style="padding: 8px;">Postgraduate Research Support Scheme (PRSS) funding, UNSW.</td>
-    </tr>
-    <tr>
-      <td style="padding: 8px;">2011:</td>
-      <td style="padding: 8px;">University International Postgraduate Award of UNSW.</td>
-    </tr>
-</tbody>
-</table>
-
-</section>
-
-<section id="publications" style="text-align: justify;">
+  <div class="w3-container w3-padding-32" id="publications">
     <h2>Selected Publications</h2>
-<!--     <div class="pub-item">
-        Author Names. (Year). Paper Title. <em>Journal/Conference Name</em>. <a href="#">[Link]</a>
-    </div> -->
     <ol>
-        <li> [SJR Q1; IF=5.1] <strong>W. Yang</strong>, S. Wang, J. Hu, X. Tao and Y. Li, "Feature extraction and learning approaches for cancellable biometrics: a survey". CAAI Transactions on Intelligence Technology. p. 22, 2024, doi: 10.1049/cit2.12283</li>
-        <li>[SJR Q1; IF=6.6] H. Cui, X. Yang, <strong>W. Yang</strong>, B. Qin and X. Yi, "Token-Based Biometric Enhanced Key Derivation for Authentication Over Wireless Networks", IEEE Transactions on Network Science and Engineering, 2023.</li>
-        <li>[SJR Q1; IF=5.6] <strong>W. Yang</strong>, S. Wang, J. J. Kang, M. N. Johnstone, and A. Bedari, "A linear convolution-based cancelable fingerprint biometric authentication system," Computers & Security, vol. 114, p. 102583, 2022.</li>
-        <li>[SJR Q1; IF=10.6] <strong>W. Yang</strong> and S. Wang, “A Privacy-Preserving ECG-Based Authentication System for Securing Wireless Body Sensor Networks”, IEEE Internet of Things Journal, 2021, doi: 10.1109/JIOT.2021.3109609</li>
-        <li>[SJR Q1; IF=11.2] <strong>W. Yang</strong>, S. Wang, G. Zheng, J. Yang, and C. Valli, "A Privacy-Preserving Lightweight Biometric System for Internet-of-Things Security," IEEE Communications Magazine, p. 6, 2019. doi:10.1109/MCOM.2019.1800378</li>
-        <li>[SJR Q1; IF=12.3] <strong>W. Yang</strong>, S. Wang, J. Hu, G. Zheng, J. Yang, and C. Valli, "Securing Deep Learning Based Edge Finger-vein Biometrics with Binary Decision Diagram," IEEE Transactions on Industrial Informatics, p. 11, 2019. doi: 10.1109/TII.2019.2900665</li>
-        <li>[SJR Q1; ERA: A*; IF=8.0] <strong>W. Yang</strong>, S. Wang, J. Hu, G. Zheng, and C. Valli, "A Fingerprint and Finger-vein Based Cancelable Multi-biometric System," Pattern Recognition, vol. 78, pp. 242-251, 2018.</li>
-        <li>[SJR Q1; ERA: A; IF=6.8] <strong>W. Yang</strong>, J. Hu, and S. Wang, "A Delaunay Quadrangle-Based Fingerprint Authentication System With Template Protection Using Topology Code for Local Registration and Security Enhancement", IEEE Transactions on Information Forensics and Security, vol. 9, 2014, pp. 1179-1192.</li>
-        <li>[SJR Q1; ERA: A*; IF=8.0] A. Bedari, S. Wang, and <strong>W. Yang</strong>, "Design of Cancelable MCC-Based Fingerprint Templates Using Dyno-Key Model," Pattern Recognition, vol. 119, p. 108074, 2021, doi: https://doi.org/10.1016/j.patcog.2021.108074.  </li>
-        <li>[SJR Q1; ERA: A*; IF=8.0] J. Moorfield, S. Wang, <strong>W. Yang</strong>, A. Bedari, and P. Van Der Kamp, "A Möbius transformation based model for fingerprint minutiae variations," Pattern Recognition, vol. 98, p. 107054, 2019. DOI: 10.1016/j.patcog.2019.107054.  </li>
-        <li>[SJR Q1; ERA: A*; IF=8.0] S. Wang, <strong>W. Yang</strong>, and J. Hu, "Design of Alignment-Free Cancelable Fingerprint Templates with Zoned Minutia Pairs." Pattern Recognition, vol. 66, 2017, pp. 295-301.</li>
-        <li>[SJR Q1; IF=5.6] <strong>W. Yang</strong>, S. Wang, M. Shahzad, and W. Zhou, "A cancelable biometric authentication system based on feature-adaptive random projection," Journal of Information Security and Applications, vol. 58, p. 102704, 2021, doi:10.1016/j.jisa.2020.102704.</li>
-        <li>[SJR Q1; ERA: A*; IF=7.7] G. Zheng, <strong>W. Yang</strong>, C. Valli, L. Qiao, R. Shankaran, M. A. Orgun, et al., "Finger-to-Heart (F2H): Authentication for Wireless Implantable Medical Devices," IEEE journal of biomedical and health informatics, 2018. DOI: 10.1109/JBHI.2018.2864796.</li>
+      <li>W. Yang et al., "Feature extraction for cancellable biometrics: A survey," CAAI Trans. on Intelligence Technology, 2024.</li>
+      <li>W. Yang et al., "Token-Based Biometric Key Derivation," IEEE TNS&E, 2023.</li>
+      <li>W. Yang et al., "Privacy-Preserving ECG Authentication," IEEE IoT Journal, 2021.</li>
     </ol>
+    <p>Full list: <a href="https://scholar.google.com.au/citations?hl=en&user=9RuoruEAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Google Scholar</a></p>
+  </div>
 
-    The complete list of my publications can be found from my <a href="https://scholar.google.com.au/citations?hl=en&user=9RuoruEAAAAJ&view_op=list_works&sortby=pubdate"> <strong>Google Scholar</strong> </a>  !
-</section>
-
-<section id="teaching" style="text-align: justify;">
+  <div class="w3-container w3-padding-32" id="teaching">
     <h2>Teaching</h2>
     <ul>
-        <li>2022:    Computational Thinking with Python (CSC8100)</li>
-        <li>2022:    Network Analysis and Design (CSC3413)</li>
-        <li>2023:    Cyber Security Architecture (CSC8100)</li>
-        <li>2023:    Penetration Testing (CSC8101)</li>
-        <li>2023:    Security 1: Cybersecurity Foundations (CSC2320)</li>
-        
+      <li>2023: Cyber Security Architecture (CSC8100)</li>
+      <li>2023: Penetration Testing (CSC8101)</li>
+      <li>2022: Computational Thinking with Python (CSC8100)</li>
     </ul>
-</section>
+  </div>
 
-<footer>
-    <p>Contact: Wencheng.Yang@unisq.edu.au | © Wencheng Yang</p>
-</footer>
+  <footer class="w3-container w3-padding-16 w3-light-grey">
+    <p>Contact: Wencheng.Yang@unisq.edu.au | &copy; Wencheng Yang</p>
+  </footer>
+
+</div>
+
+<script>
+// Script for opening and closing sidebar on small screens
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
 
 </body>
 </html>
